@@ -1,1 +1,0 @@
-cmd_/home/amilas/Desktop/Linux-Kernel-Device-Drivers/03-HeoolWorld3/hello-3.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/amilas/Desktop/Linux-Kernel-Device-Drivers/03-HeoolWorld3/hello-3.ko /home/amilas/Desktop/Linux-Kernel-Device-Drivers/03-HeoolWorld3/hello-3.o /home/amilas/Desktop/Linux-Kernel-Device-Drivers/03-HeoolWorld3/hello-3.mod.o
