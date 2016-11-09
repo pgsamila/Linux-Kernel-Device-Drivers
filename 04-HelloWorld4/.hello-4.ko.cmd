@@ -1,0 +1,1 @@
+cmd_/home/amilas/Desktop/Linux-Kernel-Device-Drivers/04-HelloWorld4/hello-4.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/amilas/Desktop/Linux-Kernel-Device-Drivers/04-HelloWorld4/hello-4.ko /home/amilas/Desktop/Linux-Kernel-Device-Drivers/04-HelloWorld4/hello-4.o /home/amilas/Desktop/Linux-Kernel-Device-Drivers/04-HelloWorld4/hello-4.mod.o
