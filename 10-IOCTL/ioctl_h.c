@@ -111,18 +111,18 @@ static int hello_init(void){
 	 */
 	
 	request_mem_region(IOMUXR, MEM_REGION,"GPIO");
-    request_mem_region(GPIO_DR, MEM_REGION,"GPIO2");
+    	request_mem_region(GPIO_DR, MEM_REGION,"GPIO2");
  
-    iomux_register = ioremap(IOMUXR, MEM_REGION);
-    led_pin_register = ioremap(GPIO_DR, MEM_REGION);
+    	iomux_register = ioremap(IOMUXR, MEM_REGION);
+    	led_pin_register = ioremap(GPIO_DR, MEM_REGION);
 
 	/* IOMUX */
-    iowrite32(0x00000015,(iomux_register+0xB8)); 
+   	iowrite32(0x00000015,(iomux_register+0xB8)); 
         
-    /* DIRECTION */
-    iowrite32(MEM_REG,(led_pin_register+0x4)); 
+    	/* DIRECTION */
+    	iowrite32(MEM_REG,(led_pin_register+0x4)); 
 
-    /* LED OFF */ 
+    	/* LED OFF */ 
 	iowrite32(LED_OFF,(led_pin_register+0x0));	
 
 
@@ -136,15 +136,15 @@ static void hello_exit(void){
 
 	/*LED EXIT OFF blink here*/
 
-    iowrite32(MEM_FREE,(iomux_register+0xB8));
-    iowrite32(LED_OFF,(led_pin_register+0x0));
-    iowrite32(MEM_FREE,(led_pin_register+0x4));
+    	iowrite32(MEM_FREE,(iomux_register+0xB8));
+    	iowrite32(LED_OFF,(led_pin_register+0x0));
+    	iowrite32(MEM_FREE,(led_pin_register+0x4));
 
-    iounmap(IOMUXR);
-    iounmap(GPIO_DR);
+    	iounmap(IOMUXR);
+    	iounmap(GPIO_DR);
 
-    release_mem_region(IOMUXR,MEM_REGION);
-    release_mem_region(GPIO_DR,MEM_REGION);
+    	release_mem_region(IOMUXR,MEM_REGION);
+    	release_mem_region(GPIO_DR,MEM_REGION);
     
 	printk(KERN_ALERT "HelloWorld exit called\n");
 }
