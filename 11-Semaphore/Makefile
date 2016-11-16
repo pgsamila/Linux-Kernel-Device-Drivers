@@ -1,4 +1,5 @@
-obj-m := hello-4.o
+
+obj-m := semaphore.o
 
 KDIR := /lib/modules/$(shell uname -r)/build
 
